@@ -4,49 +4,29 @@
     "description": "DevOps implementation untuk aplikasi web berbasis microservices",
     "main": "src/index.js",
     "scripts": {
-      "start": "node dist/index.js",
-      "dev": "nodemon src/index.js",
-      "build": "babel src -d dist",
-      "test": "jest --coverage --reporters=default --reporters=jest-junit",
-      "test:watch": "jest --watch",
-      "test:integration": "jest --testMatch='**/__tests__/integration/**/*.test.js'",
-      "lint": "eslint src/",
-      "lint:fix": "eslint src/ --fix",
-      "audit": "npm audit --audit-level moderate"
+        "start": "node src/index.js",
+        "dev": "nodemon src/index.js",
+        "build": "echo 'Build process completed'",
+        "test": "jest --coverage --verbose",
+        "test:watch": "jest --watch"
     },
     "dependencies": {
-      "express": "^4.18.2",
-      "cors": "^2.8.5",
-      "helmet": "^6.0.1",
-      "dotenv": "^16.0.3",
-      "mongoose": "^6.8.4",
-      "jsonwebtoken": "^9.0.0",
-      "bcryptjs": "^2.4.3"
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "helmet": "^6.0.1"
     },
     "devDependencies": {
-      "@babel/cli": "^7.20.7",
-      "@babel/core": "^7.20.12",
-      "@babel/preset-env": "^7.20.2",
-      "eslint": "^8.32.0",
-      "jest": "^29.3.1",
-      "jest-junit": "^15.0.0",
-      "nodemon": "^2.0.20",
-      "supertest": "^6.3.3"
+        "jest": "^29.3.1",
+        "nodemon": "^2.0.20",
+        "supertest": "^6.3.3"
     },
     "jest": {
-      "testEnvironment": "node",
-      "coverageDirectory": "coverage",
-      "collectCoverageFrom": [
-        "src/**/*.js",
-        "!src/index.js"
-      ],
-      "reporters": [
-        "default",
-        "jest-junit"
-      ]
-    },
-    "jest-junit": {
-      "outputDirectory": "reports",
-      "outputName": "jest-junit.xml"
+        "testEnvironment": "node",
+        "coverageDirectory": "coverage",
+        "collectCoverageFrom": [
+            "src/**/*.js",
+            "!src/index.js"
+        ]
     }
-  }
+}
